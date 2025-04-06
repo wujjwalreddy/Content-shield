@@ -1,0 +1,234 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 262.1 83.3% 57.8%; /* Purple */
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 199 89% 48%; /* Blue */
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 262.1 83.3% 57.8%; /* Purple */
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 262.1 83.3% 57.8%; /* Purple */
+
+    --radius: 0.5rem;
+
+    /* Chart colors */
+    --chart-1: 0 84.2% 60.2%;
+    --chart-2: 24.6 95% 53.1%;
+    --chart-3: 262.1 83.3% 57.8%;
+    --chart-4: 199 89% 48%;
+    --chart-5: 332.1 84% 70.2%;
+    --chart-6: 271.5 91.7% 65.1%;
+    --chart-7: 162.9 93.5% 24.3%;
+    --chart-8: 48.8 96.6% 53.1%;
+  }
+
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 262.1 83.3% 57.8%; /* Purple */
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 199 89% 48%; /* Blue */
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 262.1 83.3% 57.8%; /* Purple */
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 262.1 83.3% 57.8%; /* Purple */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Custom gradient backgrounds */
+.bg-gradient-blue-purple {
+  background: linear-gradient(135deg, #3b82f6 0%, #8b5cf6 100%);
+}
+
+.bg-gradient-orange-red {
+  background: linear-gradient(135deg, #f97316 0%, #ef4444 100%);
+}
+
+.bg-gradient-green-blue {
+  background: linear-gradient(135deg, #10b981 0%, #3b82f6 100%);
+}
+
+.bg-gradient-purple-pink {
+  background: linear-gradient(135deg, #8b5cf6 0%, #ec4899 100%);
+}
+
+.bg-gradient-pink-orange {
+  background: linear-gradient(135deg, #ec4899 0%, #f97316 100%);
+}
+
+.bg-gradient-blue-green {
+  background: linear-gradient(135deg, #3b82f6 0%, #10b981 100%);
+}
+
+/* Card hover effects */
+.card-hover-effect {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card-hover-effect:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+/* Animated progress bars */
+.progress-animate .indicator {
+  animation: progress-animation 1s ease-out;
+}
+
+@keyframes progress-animation {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+/* Sidebar styles */
+.sidebar {
+  width: 260px;
+  transition: width 0.3s ease;
+}
+
+.sidebar-collapsed {
+  width: 80px;
+}
+
+.sidebar-item {
+  transition: all 0.3s ease;
+}
+
+.sidebar-item:hover {
+  background-color: rgba(139, 92, 246, 0.1);
+}
+
+.sidebar-item.active {
+  background-color: rgba(139, 92, 246, 0.2);
+  border-left: 4px solid #8b5cf6;
+}
+
+/* Colorful badges */
+.badge-hate-speech {
+  background-color: rgba(239, 68, 68, 0.2);
+  color: #ef4444;
+}
+
+.badge-misinformation {
+  background-color: rgba(249, 115, 22, 0.2);
+  color: #f97316;
+}
+
+.badge-cyberbullying {
+  background-color: rgba(139, 92, 246, 0.2);
+  color: #8b5cf6;
+}
+
+.badge-harassment {
+  background-color: rgba(6, 182, 212, 0.2);
+  color: #06b6d4;
+}
+
+.badge-self-harm {
+  background-color: rgba(236, 72, 153, 0.2);
+  color: #ec4899;
+}
+
+.badge-threats {
+  background-color: rgba(220, 38, 38, 0.2);
+  color: #dc2626;
+}
+
+/* Colorful platform indicators */
+.platform-twitter {
+  background-color: #1da1f2;
+}
+
+.platform-reddit {
+  background-color: #ff4500;
+}
+
+.platform-facebook {
+  background-color: #4267b2;
+}
+
+.platform-instagram {
+  background-color: #c13584;
+}
+
+.platform-youtube {
+  background-color: #ff0000;
+}
+
+.platform-tiktok {
+  background-color: #000000;
+}
+
+/* Animated background */
+.animated-bg {
+  background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+  background-size: 400% 400%;
+  animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
