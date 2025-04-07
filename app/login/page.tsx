@@ -42,7 +42,7 @@ export default function LoginPage() {
               "This platform has revolutionized how we handle content moderation, combining AI precision with human
               oversight for optimal results."
             </p>
-            <footer className="text-sm">Sofia Chen, Trust & Safety Lead</footer>
+            <footer className="text-sm">Wujjwal Moin, Trust & Safety Lead</footer>
           </blockquote>
         </div>
       </div>
